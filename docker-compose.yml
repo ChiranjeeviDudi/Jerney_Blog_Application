@@ -2,7 +2,7 @@ services:
   db:
     image: postgres:16-alpine
     container_name: jerney-db
-    restarts: unless-stopped
+    restart: unless-stopped
     environment:
       POSTGRES_USER: jerney_user
       POSTGRES_PASSWORD: jerney_pass1234
@@ -27,7 +27,7 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     container_name: jerney-backend
-    restarts: unless-stopped
+    restart: unless-stopped
     environment:
       PORT: "5000"
       DB_USER: jerney_user
@@ -53,7 +53,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     container_name: jerney-frontend
-    restarts: unless-stopped
+    restart: unless-stopped
     ports:
       - "80:80"
     depends_on:
