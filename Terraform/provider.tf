@@ -14,11 +14,11 @@ terraform {
   #     encrypt        = true
   #   }
   backend "s3" {
-    bucket         = "jerney-terraform-state-ap-south-1-765607524544-ap-south-1-an"
-    key            = "auto_eks/terraform.tfstate"
-    region         = "ap-south-1"
-    dynamodb_table = "jerney-tf-lock"
-    encrypt        = true
+    bucket       = "jerney-terraform-state-ap-south-1-765607524544-ap-south-1-an"
+    key          = "auto_eks/terraform.tfstate"
+    region       = "ap-south-1"
+    encrypt      = true
+    use_lockfile = true
   }
 }
 
