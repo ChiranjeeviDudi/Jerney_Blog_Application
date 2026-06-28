@@ -214,7 +214,7 @@ jobs:
           failure-threshold: warning
 
   # ==============================================================
-  # STAGE 7: Update K8s Manifest with New Image Tag
+  # STAGE 7: Update K8s Manifest with New Image Tag (testing)
   # Only runs on push to main (not on PRs)
   # ==============================================================
   update-manifest:
